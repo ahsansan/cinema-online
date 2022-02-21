@@ -1,0 +1,229 @@
+.container-utama {
+  margin-top: 40px;
+}
+
+.container-list-film {
+  width: 90%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.highlight-film {
+  width: 1081px;
+  height: 437px;
+  padding: 40px 80px;
+  background: linear-gradient(90deg, #121212 0%, rgba(18, 18, 18, 0) 47.02%);
+  border-radius: 5px;
+}
+
+.pointer {
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.list-film {
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 25px;
+}
+
+.button-buy-highlight {
+  padding: 10px 20px;
+  background-color: #cd2e71;
+  border-radius: 5px;
+  color: white;
+  border: none;
+}
+
+.button-buy-highlight:hover {
+  background-color: #be0552;
+}
+
+.judul-film-highlight {
+  font-family: Avenir;
+  font-size: 48px;
+  font-weight: 900;
+  color: #a52620;
+}
+
+.deskripsi-film-highlight {
+  font-family: Avenir;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.harga-film-highlight {
+  color: #cd2e71;
+  font-family: Avenir;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.kategori-film-highlight {
+  color: black;
+  font-family: Avenir;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+/* Detail */
+
+.tumbnail-film-detail {
+  border-radius: 5px;
+  height: 485px;
+  width: 349px;
+}
+
+.judul-film-detail {
+  font-family: Avenir;
+  font-size: 40px;
+  font-weight: 900;
+  color: white;
+}
+
+.button-buy-film {
+  padding: 10px 20px;
+  background-color: hsl(335, 63%, 49%);
+  margin-bottom: 30px;
+  border: none;
+  color: white;
+  border-radius: 5px;
+}
+
+.button-buy-film:hover {
+  background-color: hsl(335, 82%, 28%);
+}
+
+.toast-buy-film {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #469f74;
+  font-size: 18px;
+  width: 70%;
+  height: 142px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#overlay {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  color: #fff;
+}
+
+.overlay {
+  position: absolute;
+  width: 640px;
+  height: 360px;
+  background: #000;
+  opacity: 0;
+}
+
+.detail-genre {
+  font-family: Avenir;
+  font-weight: 800;
+  font-size: 24px;
+  color: #7e7e7e;
+}
+
+.detail-harga {
+  font-family: Avenir;
+  font-weight: 900;
+  font-size: 18px;
+  color: hsl(335, 63%, 49%);
+}
+
+.detail-desk {
+  font-family: Avenir;
+  font-weight: 400;
+  font-size: 18px;
+  color: white;
+}
+
+/* Modal Purchase */
+
+.info-modal-purchase .modal-content {
+  background-color: #1f1f1f !important;
+  border: 0 solid black !important;
+  border-radius: 15px !important;
+  padding: 20px 15px !important;
+  color: white;
+}
+
+.input-account-number {
+  background-color: #d2d2d240;
+  border: 2px solid #d2d2d2;
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 17px;
+  color: #b1b1b1;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.preview-payment {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.tombol-upload-payment {
+  background-color: #cd2e71;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.tombol-upload-payment:hover {
+  background-color: #940e46;
+}
+
+.tombol-upload-payment p {
+  margin-top: 15px;
+  font-family: Avenir;
+  font-weight: 700;
+}
+
+.tombol-add-payment {
+  width: 100%;
+  border: none;
+  padding-top: 10px;
+  padding-bottom: 13px;
+  border-radius: 13px;
+  background-color: #cd2e71;
+  color: white;
+  font-family: Avenir;
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.tombol-add-payment:hover {
+  background-color: #940e46;
+}
+
+/* My List Film */
+
+.judul-my-film {
+  font-family: Avenir;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.my-film-list {
+  cursor: pointer;
+  border-radius: 5px;
+}

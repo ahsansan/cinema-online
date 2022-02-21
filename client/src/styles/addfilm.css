@@ -1,0 +1,122 @@
+.judul-add-film {
+  font-family: Avenir;
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.title-input-addfilm {
+  background-color: #d2d2d240;
+  border: 2px solid #d2d2d2;
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 17px;
+  color: #b1b1b1;
+  padding: 10px;
+  width: 98%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.normal-input-addfilm {
+  background-color: #d2d2d240;
+  border: 2px solid #d2d2d2;
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 17px;
+  color: #b1b1b1;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+.normal-textarea-addfilm {
+  background-color: #d2d2d240;
+  border: 2px solid #d2d2d2;
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 17px;
+  color: #b1b1b1;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  resize: none;
+  height: 200px;
+}
+
+.preview-film {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.save-button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-add-film {
+  width: 230px;
+  height: 55px;
+  background-color: #cd2e71;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 50px;
+  font-family: Avenir;
+  font-weight: 900;
+}
+
+.btn-add-film:hover {
+  background-color: #92043f;
+}
+
+.tombol-tumbnail {
+  background-color: #d2d2d240;
+  border: 2px solid #d2d2d2;
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 17px;
+  color: #b1b1b1;
+  padding: 1px 10px;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
+.tombol-add-pp {
+  background-color: #cd2e71;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  width: 230px;
+  font-family: Avenir;
+  font-weight: 600;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.tombol-add-pp:hover {
+  background-color: #92043f;
+}
+
+.btn-add-ct {
+  width: 230px;
+  height: 55px;
+  background-color: #cd2e71;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-family: Avenir;
+  font-weight: 900;
+}
+
+.btn-add-ct:hover {
+  background-color: #92043f;
+}
