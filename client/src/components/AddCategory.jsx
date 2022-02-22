@@ -73,7 +73,7 @@ export default (props) => {
           Add Category
         </div>
         {status.message && (
-          <Alert variant={status.error ? "danger" : "primary"}>
+          <Alert variant={status.error ? "danger" : "success"}>
             {status.message}
           </Alert>
         )}

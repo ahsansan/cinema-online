@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Table, Container, Button } from "react-bootstrap";
+import { Table, Container } from "react-bootstrap";
 import { API } from "../config/api";
 import DeleteCategories from "../components/DeleteCategories";
 import AddCategory from "../components/AddCategory";

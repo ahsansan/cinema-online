@@ -94,7 +94,7 @@ export default () => {
     <Container className="mt-5" data-aos="fade-up">
       <h1 className="mb-4 judul-add-film">Add Film</h1>
       {status.message && (
-        <Alert variant={status.error ? "danger" : "primary"}>
+        <Alert variant={status.error ? "danger" : "success"}>
           {status.message}
         </Alert>
       )}
