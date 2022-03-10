@@ -33,7 +33,6 @@ export default (props) => {
     fullName: "",
     phone: "",
     password: "",
-    image: "noname.png",
   });
 
   // ketika di input

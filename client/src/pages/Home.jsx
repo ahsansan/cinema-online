@@ -55,12 +55,11 @@ export default () => {
     <>
       <div className="container-utama" data-aos="fade-right">
         {films.length && (
-          <Container>
+          <Container className="container-highlight">
             <div
-              className="mt-5"
-              className="highlight-film"
+              className="highlight-film mt-5"
               style={{
-                backgroundImage: `url(http://localhost:5000/uploads/${films[randIndex].tumbnail})`,
+                backgroundImage: `url(${films[randIndex].tumbnail})`,
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
               }}
@@ -99,10 +98,8 @@ export default () => {
               <img
                 className="pointer"
                 onClick={() => goToDetailPage(film.id)}
-                src={`http://localhost:5000/uploads/${film.tumbnail}`}
+                src={`${film.tumbnail}`}
                 alt={film.title}
-                width="180px"
-                height="250px"
               />
             </Col>
           ))}

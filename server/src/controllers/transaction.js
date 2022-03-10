@@ -4,6 +4,7 @@ const fs = require("fs");
 
 exports.addTransaction = async (req, res) => {
   try {
+    const path = process.env.UPLOAD_PATH;
     const idUser = req.user.id;
     const idFilm = req.params.id;
     const data = req.body;
@@ -11,7 +12,7 @@ exports.addTransaction = async (req, res) => {
       ...data,
       idUser: idUser,
       idFilm: idFilm,
-      transferProof: req.file.filename,
+      transferProof: path + req.file.filename,
     });
 
     res.status(200).send({

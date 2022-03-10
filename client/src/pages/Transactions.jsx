@@ -85,7 +85,7 @@ export default () => {
               <td>{trans.user.fullName}</td>
               <td>
                 <a
-                  href={`http://localhost:5000/uploads/${trans.transferProof}`}
+                  href={`${trans.transferProof}`}
                   target="_blank"
                   rel="noreferrer"
                   style={{ textDecoration: "none", color: "white" }}

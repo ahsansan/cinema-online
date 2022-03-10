@@ -59,18 +59,14 @@ exports.getUser = async (req, res) => {
 exports.updateUser = async (req, res) => {
   try {
     const id = req.params.id;
-
-    // data body
     const data = req.body;
 
-    // cek id
     const checkId = await tbUser.findOne({
       where: {
         id: id,
       },
     });
 
-    // Jika id tidak ada
     if (!checkId) {
       return res.status(400).send({
         status: "failed",
@@ -83,14 +79,12 @@ exports.updateUser = async (req, res) => {
       image: req.file.filename,
     };
 
-    // Proses update
     await tbUser.update(dataUpload, {
       where: {
         id: id,
       },
     });
 
-    // Data setelah di update
     let dataUpdate = await tbUser.findOne({
       attributes: {
         exclude: ["createdAt", "updatedAt", "password"],
@@ -102,21 +96,17 @@ exports.updateUser = async (req, res) => {
 
     dataUpdate = JSON.parse(JSON.stringify(dataUpdate));
 
-    // Mengedit image link
     dataUpdate = {
       ...dataUpdate,
       image: process.env.UPLOAD_PATH + dataUpdate.image,
     };
 
-    // Berhasil update
     res.status(200).send({
       status: "success",
       data: {
         user: dataUpdate,
       },
     });
-
-    // error server
   } catch (err) {
     console.log(err);
     res.status(500).send({
@@ -128,7 +118,6 @@ exports.updateUser = async (req, res) => {
 
 exports.deleteUser = async (req, res) => {
   try {
-    // Mengambil id dari params
     const id = req.params.id;
 
     const checkId = await tbUser.findOne({
@@ -143,14 +132,12 @@ exports.deleteUser = async (req, res) => {
       }
     });
 
-    // Menghapus data berdasarkan id
     const deleteData = await tbUser.destroy({
       where: {
         id: id,
       },
     });
 
-    // Jika id tidak ada
     if (!deleteData) {
       return res.status(400).send({
         status: "failed",
@@ -158,7 +145,6 @@ exports.deleteUser = async (req, res) => {
       });
     }
 
-    // Berhasil Menghapus
     res.status(200).send({
       status: `Id ${id} deleted`,
 
@@ -166,8 +152,6 @@ exports.deleteUser = async (req, res) => {
         id,
       },
     });
-
-    // Jika error
   } catch (err) {
     console.log(err);
     res.status(500).send({

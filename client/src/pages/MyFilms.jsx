@@ -48,7 +48,7 @@ export default () => {
               <img
                 className="my-film-list"
                 onClick={() => router(`/film/${film.idFilm}`)}
-                src={`http://localhost:5000/uploads/${film.film.tumbnail}`}
+                src={`${film.film.tumbnail}`}
                 alt={film.film.title}
                 width="180px"
                 height="250px"

@@ -85,9 +85,11 @@ exports.getFilm = async (req, res) => {
 
 exports.addFilm = async (req, res) => {
   try {
+    const path = process.env.UPLOAD_PATH;
+
     const dataFilm = await tbFilm.create({
       ...req.body,
-      tumbnail: req.file.filename,
+      tumbnail: path + req.file.filename,
     });
     const { id } = dataFilm;
 
@@ -125,6 +127,7 @@ exports.updateFilm = async (req, res) => {
   try {
     const id = req.params.id;
     const body = req.body;
+    const path = process.env.UPLOAD_PATH;
 
     const findFilm = await tbFilm.findOne({
       where: {
@@ -141,7 +144,7 @@ exports.updateFilm = async (req, res) => {
 
     const dataFilm = {
       ...body,
-      tumbnail: req.file.filename,
+      tumbnail: path + req.file.filename,
     };
 
     await tbFilm.update(dataFilm, {

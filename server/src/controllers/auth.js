@@ -6,13 +6,13 @@ const jwt = require("jsonwebtoken");
 exports.register = async (req, res) => {
   try {
     const data = req.body;
+    const path = process.env.UPLOAD_PATH;
 
     const schema = joi.object({
       fullName: joi.string().min(4).required(),
       email: joi.string().email().required(),
       phone: joi.string().min(4).required(),
       password: joi.string().min(6).required(),
-      image: joi.string().min(3).required(),
     });
 
     const { error } = schema.validate(data);
@@ -43,6 +43,7 @@ exports.register = async (req, res) => {
     const dataUser = await tbUser.create({
       ...data,
       password: hashhedPassword,
+      image: path + "noname.png",
     });
 
     const tokenData = {
@@ -80,7 +81,6 @@ exports.register = async (req, res) => {
 exports.login = async (req, res) => {
   try {
     const data = req.body;
-    const path = process.env.UPLOAD_PATH;
 
     // Validasi input
     const schema = joi.object({
@@ -150,7 +150,7 @@ exports.login = async (req, res) => {
           fullName: dataOnTable.fullName,
           email: dataOnTable.email,
           phone: dataOnTable.phone,
-          image: path + dataOnTable.image,
+          image: dataOnTable.image,
           role: dataOnTable.role,
           token,
         },
@@ -168,7 +168,6 @@ exports.login = async (req, res) => {
 
 exports.authUser = async (req, res) => {
   try {
-    const path = process.env.UPLOAD_PATH;
     const id = req.user.id;
     const dataUser = await tbUser.findOne({
       where: {
@@ -193,7 +192,7 @@ exports.authUser = async (req, res) => {
           id: dataUser.id,
           name: dataUser.fullName,
           email: dataUser.email,
-          image: path + dataUser.image,
+          image: dataUser.image,
           phone: dataUser.phone,
           role: dataUser.role,
         },

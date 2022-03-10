@@ -15,7 +15,6 @@ export default () => {
     Aos.init({ duration: 1000 });
   }, []);
 
-  const path = "http://localhost:5000/uploads/";
   const [profile, setProfile] = useState({});
   const [isError, setIsError] = useState(false);
   const [trans, setTrans] = useState([]);
@@ -58,13 +57,13 @@ export default () => {
 
   return (
     <Container className="mt-5" style={{ minHeight: "71vh" }}>
-      <div className="d-flex justify-content-between align-item-center">
-        <div data-aos="fade-right">
+      <div className="container-profile-utama">
+        <div className="mb-5" data-aos="fade-right">
           <h1 className="mb-4 my-profile">My Profile</h1>
           <div className="d-flex justify-content-between align-item-center">
             <div className="d-flex flex-column justify-content-between">
               <img
-                src={path + `${profile.image}`}
+                src={`${profile.image}`}
                 alt="profile-pic"
                 className="image-profile"
                 width="180px"
@@ -100,7 +99,7 @@ export default () => {
               <Card
                 key={film.idFilm}
                 style={{
-                  width: "419px",
+                  width: "350px",
                   height: "auto",
                   marginBottom: "1rem",
                   backgroundColor: "#CD2E7170",

@@ -82,7 +82,7 @@ export default () => {
       const user = response.data.data.user;
 
       setForm({
-        image: `http://localhost:5000/uploads/${user.image}`,
+        image: `${user.image}`,
         fullName: user.fullName,
         email: user.email,
         phone: user.phone,
@@ -107,9 +107,9 @@ export default () => {
       >
         <div className="preview-film">
           {preview ? (
-            <img src={preview} className="img-fluid rounded" width="20%" />
+            <img src={preview} className="img-fluid rounded" width="30%" />
           ) : (
-            <img src={image} className="img-fluid rounded" width="15%" />
+            <img src={image} className="img-fluid rounded" width="30%" />
           )}
         </div>
         <div>

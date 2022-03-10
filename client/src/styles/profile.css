@@ -1,3 +1,10 @@
+.container-profile-utama {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .image-profile {
   margin-right: 30px;
   border-radius: 5px;
@@ -86,4 +93,13 @@
   padding: 3px 20px;
   border-radius: 5px;
   color: rgb(133, 0, 0);
+}
+
+@media screen and (max-width: 600px) {
+  .container-profile-utama {
+    flex-direction: column;
+  }
+  .my-profile {
+    font-size: 25px;
+  }
 }

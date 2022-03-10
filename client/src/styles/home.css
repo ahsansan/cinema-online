@@ -21,6 +21,8 @@
 .pointer {
   cursor: pointer;
   border-radius: 5px;
+  width: 180px;
+  height: 250px;
 }
 
 .list-film {
@@ -69,6 +71,19 @@
 }
 
 /* Detail */
+
+.container-isi-detail {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.container-detail {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .tumbnail-film-detail {
   border-radius: 5px;
@@ -226,4 +241,111 @@
 .my-film-list {
   cursor: pointer;
   border-radius: 5px;
+}
+
+.detail-judul-harga {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.youtube-class {
+  width: 640px;
+  height: 360px;
+}
+
+.genre-price-desk {
+  width: 640;
+  margin-top: 2rem;
+}
+
+.isi-detail {
+  flex: 1;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 600px) {
+  .container-utama {
+    margin-top: 15px;
+  }
+  .container-highlight {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .highlight-film {
+    width: 400px;
+    height: 300px;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #121212 0%, rgba(18, 18, 18, 0) 47.02%);
+    border-radius: 5px;
+  }
+  .judul-film-highlight {
+    font-family: Avenir;
+    font-size: 28px;
+    font-weight: 900;
+    color: #a52620;
+  }
+  .deskripsi-film-highlight {
+    display: none;
+  }
+  .pointer {
+    height: 90%;
+    width: 90%;
+  }
+  .container-isi-detail {
+    flex-direction: column;
+  }
+  .tumbnail-film-detail {
+    margin-left: 20px;
+  }
+  .detail-judul-harga {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 40px;
+    padding-left: 20px;
+  }
+  .youtube-class {
+    width: 90%;
+    margin-left: 20px;
+  }
+  .genre-price-desk {
+    width: 90%;
+    margin-top: 2rem;
+    padding-left: 20px;
+  }
+  .judul-film-detail {
+    font-size: 30px;
+  }
+  .detail-genre {
+    font-size: 17px;
+  }
+
+  .detail-harga {
+    font-size: 15px;
+  }
+
+  .detail-desk {
+    font-size: 15px;
+  }
+  .toast-buy-film {
+    position: fixed;
+  }
+  .info-modal-purchase .modal-content {
+    border-radius: 10px !important;
+    padding: 15px 10px !important;
+  }
+  .judul-my-film {
+    font-family: Avenir;
+    font-size: 25px;
+    font-weight: 700;
+  }
+  .overlay {
+    width: 90%;
+    margin-left: 20px;
+  }
 }

@@ -3,6 +3,7 @@
   height: 15vh;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   background-color: black;
 }
 
@@ -12,6 +13,10 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+}
+
+.logo-image {
+  height: 55px;
 }
 
 .header-menu {
@@ -149,4 +154,33 @@
 
 span {
   cursor: pointer;
+}
+
+/* Responsive */
+
+@media only screen and (max-width: 600px) {
+  .header-logo {
+    padding-left: 20px;
+  }
+  .header-menu {
+    padding-right: 20px;
+  }
+  .logo-image {
+    height: 45px;
+  }
+  .register-auth-button {
+    display: none;
+  }
+  .login-auth-button {
+    background-color: #cd2e71 !important;
+    font-size: 15px !important;
+    padding: 5px 25px !important;
+  }
+  .info-modal .modal-content {
+    background-color: #1f1f1f !important;
+    border: 0 solid black !important;
+    border-radius: 5px !important;
+    padding: 15px 5px !important;
+    margin-top: 80px;
+  }
 }

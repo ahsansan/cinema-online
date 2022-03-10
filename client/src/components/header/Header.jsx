@@ -13,9 +13,9 @@ export default () => {
       <div className="header-logo">
         <Link to="/">
           <img
-            src={process.env.PUBLIC_URL + "/images/OnlineCinemaIcon.png"}
+            src="/images/OnlineCinemaIcon.png"
             alt="Online Cinema"
-            height={55}
+            className="logo-image"
           />
         </Link>
       </div>

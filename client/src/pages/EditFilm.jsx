@@ -58,7 +58,7 @@ export default () => {
       const { film } = resp.data.data;
       setForm({
         title: film.title,
-        tumbnail: `http://localhost:5000/uploads/${film.tumbnail}`,
+        tumbnail: `${film.tumbnail}`,
         price: film.price,
         description: film.description,
         filmUrl: film.filmUrl,
