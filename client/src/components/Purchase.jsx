@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Form, Modal, Alert } from "react-bootstrap";
 import { API } from "../config/api";
+import "../styles/home.css";
 
 export default ({ isVisible, onHide, filmId, title }) => {
   const [form, setForm] = useState({

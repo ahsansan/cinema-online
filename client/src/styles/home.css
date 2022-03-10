@@ -48,12 +48,14 @@
   font-size: 48px;
   font-weight: 900;
   color: #a52620;
+  text-shadow: 1px 1px #fff;
 }
 
 .deskripsi-film-highlight {
   font-family: Avenir;
   font-size: 14px;
   font-weight: 400;
+  text-shadow: 1px 1px #000;
 }
 
 .harga-film-highlight {
@@ -61,6 +63,7 @@
   font-family: Avenir;
   font-size: 18px;
   font-weight: 800;
+  text-shadow: 1px 1px #fff;
 }
 
 .kategori-film-highlight {
@@ -68,6 +71,7 @@
   font-family: Avenir;
   font-size: 18px;
   font-weight: 900;
+  text-shadow: 1px 1px #fff;
 }
 
 /* Detail */
@@ -347,5 +351,13 @@
   .overlay {
     width: 90%;
     margin-left: 20px;
+  }
+  .tombol-upload-payment {
+    width: 60%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .tombol-upload-payment p {
+    margin-top: 13px;
   }
 }
