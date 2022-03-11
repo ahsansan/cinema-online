@@ -1,4 +1,4 @@
-const { tbUser, tbTransaction } = require("../../models");
+const { tbUser } = require("../../models");
 const joi = require("joi");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
@@ -51,7 +51,6 @@ exports.register = async (req, res) => {
       fullName: dataUser.fullName,
       email: dataUser.email,
       role: dataUser.role,
-      password: dataUser.password,
     };
     const secretKey = process.env.SECRET_KEY;
 
@@ -61,9 +60,12 @@ exports.register = async (req, res) => {
       status: "success",
       data: {
         user: {
+          id: dataUser.id,
           fullName: dataUser.fullName,
-          username: dataUser.username,
+          phone: dataUser.phone,
           email: dataUser.email,
+          image: dataUser.image,
+          role: dataUser.role,
           token,
         },
       },
@@ -95,7 +97,7 @@ exports.login = async (req, res) => {
     if (error) {
       return res.status(400).send({
         status: "validation failed",
-        error: error.details[0].message,
+        message: error.details[0].message,
       });
     }
 
@@ -110,7 +112,7 @@ exports.login = async (req, res) => {
     if (!dataOnTable) {
       return res.status(400).send({
         status: "failed",
-        message: "email and Password don't match",
+        message: "email and password don't match",
       });
     }
 
@@ -124,7 +126,7 @@ exports.login = async (req, res) => {
     if (!validatePassword) {
       return res.status(400).send({
         status: "failed",
-        message: "email and Password don't match",
+        message: "email and password don't match",
       });
     }
 
@@ -134,7 +136,6 @@ exports.login = async (req, res) => {
       fullName: dataOnTable.fullName,
       email: dataOnTable.email,
       role: dataOnTable.role,
-      password: dataOnTable.password,
     };
 
     const secretKey = process.env.SECRET_KEY;
