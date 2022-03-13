@@ -26,6 +26,7 @@ export default () => {
   });
 
   const [preview, setPreview] = useState("");
+  const [status, setStatus] = useState({});
 
   const { image, fullName, email, phone } = form;
 
@@ -73,6 +74,10 @@ export default () => {
       router("/profile");
     } catch (error) {
       console.log(error);
+      setStatus({
+        message: "Something went wrong with the server, please try again later",
+        error: true,
+      });
     }
   };
 
@@ -99,6 +104,7 @@ export default () => {
   return (
     <Container className="mt-5" data-aos="fade-up">
       <h1 className="mb-4 judul-add-film">Edit Profile</h1>
+      {status.message && <Alert variant="danger">{status.message}</Alert>}
       <form
         onSubmit={(e) => {
           e.preventDefault();

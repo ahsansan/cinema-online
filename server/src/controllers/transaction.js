@@ -12,6 +12,7 @@ exports.addTransaction = async (req, res) => {
       ...data,
       idUser: idUser,
       idFilm: idFilm,
+      status: "Pending",
       transferProof: path + req.file.filename,
     });
 
