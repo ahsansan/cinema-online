@@ -4,14 +4,15 @@ import { API } from "../config/api";
 import "../styles/home.css";
 
 export default ({ isVisible, onHide, filmId, title }) => {
+  const [status, setStatus] = useState({});
+  const [preview, setPreview] = useState("");
   const [form, setForm] = useState({
     accountNumber: "",
     transferProof: "",
     idFilm: `${filmId}`,
   });
 
-  const [status, setStatus] = useState({});
-  const [preview, setPreview] = useState("");
+  parseInt(`${filmId}`);
 
   const handleOnChange = (e) => {
     setForm({
