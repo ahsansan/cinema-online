@@ -186,7 +186,7 @@ export default () => {
             className="normal-input-addfilm"
             onChange={onChange}
           >
-            <option>- Select Category</option>
+            <option disabled>- Select Category</option>
             {categories.map((category) => (
               <option value={category.id} key={category.id}>
                 {category.name}
