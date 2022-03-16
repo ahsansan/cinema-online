@@ -1,4 +1,4 @@
-const { tbFilm, tbCategory, tbUser, tbTransaction } = require("../../models");
+const { tbFilm, tbCategory } = require("../../models");
 const fs = require("fs");
 
 exports.getFilms = async (req, res) => {

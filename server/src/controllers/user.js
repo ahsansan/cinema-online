@@ -76,7 +76,7 @@ exports.updateUser = async (req, res) => {
 
     const dataUpload = {
       ...data,
-      image: req.file.filename,
+      image: process.env.UPLOAD_PATH + req.file.filename,
     };
 
     await tbUser.update(dataUpload, {
@@ -95,11 +95,6 @@ exports.updateUser = async (req, res) => {
     });
 
     dataUpdate = JSON.parse(JSON.stringify(dataUpdate));
-
-    dataUpdate = {
-      ...dataUpdate,
-      image: process.env.UPLOAD_PATH + dataUpdate.image,
-    };
 
     res.status(200).send({
       status: "success",
